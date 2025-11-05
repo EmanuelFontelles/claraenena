@@ -66,10 +66,26 @@
         body {
             font-family: var(--font-body);
             background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            background-attachment: fixed;
             color: var(--color-text);
             min-height: 100vh;
             padding: var(--spacing-lg);
             line-height: 1.6;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(107, 117, 102, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
         }
 
         /* ===================================
@@ -81,8 +97,13 @@
             padding: var(--spacing-xl) var(--spacing-md);
             background: var(--color-white);
             border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow:
+                0 4px 20px rgba(107, 117, 102, 0.12),
+                0 1px 3px rgba(212, 175, 55, 0.1);
             animation: fadeInDown 0.6s ease-out;
+            position: relative;
+            z-index: 1;
         }
 
         .header-title {
@@ -149,10 +170,15 @@
             background: var(--color-white);
             padding: var(--spacing-lg);
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            box-shadow:
+                0 4px 20px rgba(107, 117, 102, 0.12),
+                0 1px 3px rgba(212, 175, 55, 0.08);
             display: flex;
             justify-content: center;
             align-items: flex-start;
+            position: relative;
+            z-index: 1;
         }
 
         .crossword-grid {
@@ -236,9 +262,14 @@
             background: var(--color-white);
             padding: var(--spacing-lg);
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            box-shadow:
+                0 4px 20px rgba(107, 117, 102, 0.12),
+                0 1px 3px rgba(212, 175, 55, 0.08);
             overflow-y: auto;
             max-height: 780px;
+            position: relative;
+            z-index: 1;
         }
 
         .clues-title {
@@ -301,9 +332,14 @@
             background: var(--color-white);
             padding: var(--spacing-lg);
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            box-shadow:
+                0 4px 20px rgba(107, 117, 102, 0.12),
+                0 1px 3px rgba(212, 175, 55, 0.08);
             text-align: center;
             animation: fadeInUp 0.8s ease-out;
+            position: relative;
+            z-index: 1;
         }
 
         .buttons-wrapper {
@@ -627,89 +663,121 @@
                 number: 1,
                 word: "BARRAGRANDE",
                 direction: "vertical",
-                row: 4,
-                col: 12,
+                row: 9,
+                col: 11,
                 clue: "Praia piauense que irão curtir a lua de mel"
             },
             {
                 number: 2,
                 word: "EMO",
                 direction: "vertical",
-                row: 8,
-                col: 4,
+                row: 10,
+                col: 3,
                 clue: "Estilo musical adorado pela noiva"
             },
             {
                 number: 3,
                 word: "JUNHO",
                 direction: "vertical",
-                row: 4,
-                col: 7,
-                clue: "Mês da mudança de Fortaleza para São Paulo"
+                row: 6,
+                col: 6,
+                clue: "Mês da mudança de São Paulo para Fortaleza"
             },
             {
                 number: 4,
                 word: "RUGBY",
                 direction: "vertical",
-                row: 8,
-                col: 8,
+                row: 10,
+                col: 7,
                 clue: "Esporte inglês que 'uniu' o casal"
             },
             {
                 number: 5,
                 word: "VENEZA",
                 direction: "vertical",
-                row: 11,
-                col: 11,
+                row: 14,
+                col: 10,
                 clue: "Cidade conhecida pelos seus canais, em que aconteceu o noivado"
             },
             {
                 number: 6,
                 word: "FISICA",
                 direction: "vertical",
-                row: 5,
-                col: 15,
+                row: 9,
+                col: 14,
                 clue: "Curso de Graduação do noivo"
             },
             {
                 number: 7,
                 word: "NENA",
                 direction: "horizontal",
-                row: 4,
-                col: 9,
+                row: 8,
+                col: 6,
                 clue: "Apelido do noivo"
             },
             {
                 number: 8,
                 word: "SENHORDOSANEIS",
                 direction: "horizontal",
-                row: 8,
-                col: 3,
+                row: 10,
+                col: 2,
                 clue: "Trilogia do cinema que os noivos assistem no repeat e que fez parte da trilha sonora da cerimônia"
             },
             {
                 number: 9,
                 word: "PARAGUAI",
                 direction: "horizontal",
-                row: 10,
-                col: 4,
+                row: 2,
+                col: 9,
                 clue: "País que o casal visitou esse ano com intenção de comprar um aspirador robô"
             },
             {
                 number: 10,
                 word: "BENTOEKIKI",
                 direction: "horizontal",
-                row: 12,
-                col: 10,
+                row: 17,
+                col: 9,
                 clue: "Nome dos gatinhos do casal"
             },
             {
                 number: 11,
                 word: "PAULANEY",
                 direction: "horizontal",
-                row: 16,
-                col: 10,
+                row: 19,
+                col: 6,
                 clue: "Nome da rua da futura casa dos noivos"
+            },
+            {
+                number: 12,
+                word: "DRAGAODOMAR",
+                direction: "horizontal",
+                row: 0,
+                col: 0,
+                clue: "Centro cultural de Fortaleza onde aconteceu o primeiro beijo"
+            },
+            {
+                number: 13,
+                word: "OMOIDE",
+                direction: "vertical",
+                row: 0,
+                col: 5,
+                clue: "Restaurante japonês favorito do casal"
+            },
+            {
+                number: 14,
+                word: "BOLONHESA",
+                direction: "vertical",
+                row: 6,
+                col: 4,
+                clue: "Especialidade culinária do noivo"
+            },
+            {
+                number: 15,
+                word: "TRINTA",
+                direction: "vertical",
+                row: 1,
+                col: 11,
+                clue: "Idade do noivo"
             }
         ];
 
