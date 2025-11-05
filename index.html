@@ -352,6 +352,17 @@
             color: var(--color-white);
         }
 
+        .btn-print {
+            background: linear-gradient(135deg, #6b7566 0%, #5a6455 100%);
+            color: var(--color-white);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-print:hover {
+            background: linear-gradient(135deg, #5a6455 0%, #4a5345 100%);
+            border-color: #4a5345;
+        }
+
         /* ===================================
            FEEDBACK MESSAGE
            =================================== */
@@ -598,6 +609,9 @@
                 <button id="clearBtn" class="btn btn-danger" aria-label="Limpar tudo">
                     🗑️ Limpar Tudo
                 </button>
+                <button id="printBtn" class="btn btn-print" aria-label="Versão para impressão" onclick="window.open('print.html', '_blank')">
+                    🖨️ Versão para Impressão
+                </button>
             </div>
             <div id="feedbackMessage" class="feedback-message" role="alert" aria-live="polite"></div>
         </section>
@@ -710,6 +724,38 @@
                 row: 19,
                 col: 6,
                 clue: "Nome da rua da futura casa dos noivos"
+            },
+            {
+                number: 12,
+                word: "DRAGAODOMAR",
+                direction: "horizontal",
+                row: 0,
+                col: 0,
+                clue: "Centro cultural de Fortaleza onde aconteceu o primeiro beijo"
+            },
+            {
+                number: 13,
+                word: "OMOIDE",
+                direction: "vertical",
+                row: 0,
+                col: 5,
+                clue: "Restaurante japonês favorito do casal"
+            },
+            {
+                number: 14,
+                word: "BOLONHESA",
+                direction: "vertical",
+                row: 6,
+                col: 4,
+                clue: "Especialidade culinária do noivo"
+            },
+            {
+                number: 15,
+                word: "TRINTA",
+                direction: "vertical",
+                row: 1,
+                col: 11,
+                clue: "Idade do noivo"
             }
         ];
 
