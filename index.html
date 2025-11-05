@@ -352,6 +352,17 @@
             color: var(--color-white);
         }
 
+        .btn-print {
+            background: linear-gradient(135deg, #6b7566 0%, #5a6455 100%);
+            color: var(--color-white);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-print:hover {
+            background: linear-gradient(135deg, #5a6455 0%, #4a5345 100%);
+            border-color: #4a5345;
+        }
+
         /* ===================================
            FEEDBACK MESSAGE
            =================================== */
@@ -598,6 +609,9 @@
                 <button id="clearBtn" class="btn btn-danger" aria-label="Limpar tudo">
                     🗑️ Limpar Tudo
                 </button>
+                <button id="printBtn" class="btn btn-print" aria-label="Versão para impressão" onclick="window.open('print.html', '_blank')">
+                    🖨️ Versão para Impressão
+                </button>
             </div>
             <div id="feedbackMessage" class="feedback-message" role="alert" aria-live="polite"></div>
         </section>
@@ -627,89 +641,121 @@
                 number: 1,
                 word: "BARRAGRANDE",
                 direction: "vertical",
-                row: 4,
-                col: 12,
+                row: 9,
+                col: 11,
                 clue: "Praia piauense que irão curtir a lua de mel"
             },
             {
                 number: 2,
                 word: "EMO",
                 direction: "vertical",
-                row: 8,
-                col: 4,
+                row: 10,
+                col: 3,
                 clue: "Estilo musical adorado pela noiva"
             },
             {
                 number: 3,
                 word: "JUNHO",
                 direction: "vertical",
-                row: 4,
-                col: 7,
+                row: 6,
+                col: 6,
                 clue: "Mês da mudança de Fortaleza para São Paulo"
             },
             {
                 number: 4,
                 word: "RUGBY",
                 direction: "vertical",
-                row: 8,
-                col: 8,
+                row: 10,
+                col: 7,
                 clue: "Esporte inglês que 'uniu' o casal"
             },
             {
                 number: 5,
                 word: "VENEZA",
                 direction: "vertical",
-                row: 11,
-                col: 11,
+                row: 14,
+                col: 10,
                 clue: "Cidade conhecida pelos seus canais, em que aconteceu o noivado"
             },
             {
                 number: 6,
                 word: "FISICA",
                 direction: "vertical",
-                row: 5,
-                col: 15,
+                row: 9,
+                col: 14,
                 clue: "Curso de Graduação do noivo"
             },
             {
                 number: 7,
                 word: "NENA",
                 direction: "horizontal",
-                row: 4,
-                col: 9,
+                row: 8,
+                col: 6,
                 clue: "Apelido do noivo"
             },
             {
                 number: 8,
                 word: "SENHORDOSANEIS",
                 direction: "horizontal",
-                row: 8,
-                col: 3,
+                row: 10,
+                col: 2,
                 clue: "Trilogia do cinema que os noivos assistem no repeat e que fez parte da trilha sonora da cerimônia"
             },
             {
                 number: 9,
                 word: "PARAGUAI",
                 direction: "horizontal",
-                row: 10,
-                col: 4,
+                row: 2,
+                col: 9,
                 clue: "País que o casal visitou esse ano com intenção de comprar um aspirador robô"
             },
             {
                 number: 10,
                 word: "BENTOEKIKI",
                 direction: "horizontal",
-                row: 12,
-                col: 10,
+                row: 17,
+                col: 9,
                 clue: "Nome dos gatinhos do casal"
             },
             {
                 number: 11,
                 word: "PAULANEY",
                 direction: "horizontal",
-                row: 16,
-                col: 10,
+                row: 19,
+                col: 6,
                 clue: "Nome da rua da futura casa dos noivos"
+            },
+            {
+                number: 12,
+                word: "DRAGAODOMAR",
+                direction: "horizontal",
+                row: 0,
+                col: 0,
+                clue: "Centro cultural de Fortaleza onde aconteceu o primeiro beijo"
+            },
+            {
+                number: 13,
+                word: "OMOIDE",
+                direction: "vertical",
+                row: 0,
+                col: 5,
+                clue: "Restaurante japonês favorito do casal"
+            },
+            {
+                number: 14,
+                word: "BOLONHESA",
+                direction: "vertical",
+                row: 6,
+                col: 4,
+                clue: "Especialidade culinária do noivo"
+            },
+            {
+                number: 15,
+                word: "TRINTA",
+                direction: "vertical",
+                row: 1,
+                col: 11,
+                clue: "Idade do noivo"
             }
         ];
 
